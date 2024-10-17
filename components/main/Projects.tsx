@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectCard from '../sub/ProjectCard'
 import { Exp_data, Project_data } from '@/constants'
-import { div } from 'framer-motion/client';
+
 
 const Projects = () => {
     console.log("data",Exp_data);

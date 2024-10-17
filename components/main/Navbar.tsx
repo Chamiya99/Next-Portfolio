@@ -3,7 +3,7 @@ import { Socials } from '@/constants'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { slideInFromLeft, slideInFromRight } from '@/utils/motion'
+import { slideInFromLeft} from '@/utils/motion'
 
 const Navbar = () => {
 

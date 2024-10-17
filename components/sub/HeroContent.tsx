@@ -1,8 +1,7 @@
 import React from 'react'
 import * as motion from "framer-motion/client"
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
+import { slideInFromLeft, slideInFromTop } from '@/utils/motion'
 import { SparklesIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
 import ComputerCanvas from './Computer'
 
 const HeroContent = () => {
