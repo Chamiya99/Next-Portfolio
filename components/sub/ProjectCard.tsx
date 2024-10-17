@@ -2,8 +2,11 @@
 
 import Image from 'next/image'
 import React from 'react'
+// @ts-expect-error
 import Github from '@iconscout/react-unicons/icons/uil-github'
+// @ts-expect-error
 import Youtube from '@iconscout/react-unicons/icons/uil-youtube'
+// @ts-expect-error
 import Web from '@iconscout/react-unicons/icons/uil-globe'
 
 
@@ -13,12 +16,13 @@ interface Props {
     description : string,
     tag : string[],
     link : { repo : string , yt : string , web : string},
+    key : any,
 }
 
 
-const ProjectCard = ({src, title, description , tag , link} : Props) => {
+const ProjectCard = ({src, title, description , tag , link , key} : Props) => {
   return (
-    <div className='realtive overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] '>
+    <div key={key} className='realtive overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] '>
         <Image
         src={src}
         alt={title}
@@ -31,7 +35,7 @@ const ProjectCard = ({src, title, description , tag , link} : Props) => {
             <p className='mt-2 text-gray-300'>{description}</p>
         </div>
         <div className=' relative p-4 flex gap-4'>
-            {tag && tag.map((data)=>(<p className='mt-2 text-slate-600 font-bold'>{data}</p>))}
+            {tag && tag.map((data)=>(<p key={data} className='mt-2 text-slate-600 font-bold'>{data}</p>))}
         </div>
         <div className='relative p-4 flex gap-4 z-[20] justify-end'>
             
